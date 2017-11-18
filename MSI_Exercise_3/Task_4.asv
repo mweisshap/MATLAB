@@ -1,6 +1,3 @@
-%%Problem with scaling of fit, polynomil does not fit the data. maybe units
-%%wrong?
-
 clear all;
 close all;
 clc;
@@ -49,7 +46,7 @@ end
 theta = pinv(PHI) * i(1:N*n_p);
 
 x_p = 0:10:850;%mV
-y_p = (theta(1) + theta(2) .* (exp((q*x_p./1000)/(m*k_b*T))-1))
+y_p = theta(1) + theta(2) * (exp((q*x_p)/(m*k_b*T))-1)
 
 hold on 
 plot(x_p, y_p);
