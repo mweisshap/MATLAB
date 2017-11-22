@@ -44,12 +44,18 @@ T = 293; %Temperature [K]
 
 
 
-%Plot the fit into the data
+
 y_p = (theta_8k(2) + theta_8k(1) * (exp((q*u(:))/(m*k_b*T))-1));
+
 
 hold on 
 plot(sort(u), sort(y_p));
 legend('Data', 'Fit', 'Location', 'Northwest');
 
+
+
+% %c1 = cov(theta)
+% c2 = v_err*inv(PHI_8k'*PHI_8k)
+% c3 = (PHI_8k'*PHI_8k)/v_err
 
 
