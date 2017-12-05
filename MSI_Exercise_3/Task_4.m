@@ -1,5 +1,3 @@
-%%Problem with scaling of fit, polynomil does not fit the data. maybe units
-%%wrong?
 
 clear all;
 close all;

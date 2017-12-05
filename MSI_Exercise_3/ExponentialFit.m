@@ -27,7 +27,7 @@ PHI=fliplr(PHI_t);
 
 theta = pinv(PHI) * i(1:N);
 
-sigma = 1/(N-d) * norm((i(1:N)-PHI*theta),2);
+sigma = 1/(N-d) * norm((i(1:N)-PHI*theta),2)^2;
 
 cov = sigma*inv((PHI'*PHI));
 
